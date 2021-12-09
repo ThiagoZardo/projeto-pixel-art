@@ -19,16 +19,15 @@ h1{
 }
 
 
-.color:nth-last-of-type(1){
+.color:nth-last-of-type(4){
     display: inline-block;
     width: 80px;
     height: 80px;
     background-color: black;
     border: 1px solid black;
-    
 }
 
-.color:nth-last-of-type(2){
+.color:nth-last-of-type(3){
     width: 80px;
     height: 80px;
     background-color: red;
@@ -36,7 +35,7 @@ h1{
     display: inline-block;
 }
 
-.color:nth-last-of-type(3){
+.color:nth-last-of-type(2){
     width: 80px;
     height: 80px;
     background-color: blue;
@@ -44,7 +43,7 @@ h1{
     display: inline-block;
 }
 
-.color:nth-last-of-type(4){
+.color:nth-last-of-type(1){
     width: 80px;
     height: 80px;
     background-color: green;
