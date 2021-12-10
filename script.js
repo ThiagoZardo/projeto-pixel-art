@@ -24,14 +24,11 @@ function selecionaCor(event){
 
 
 //Colore com cor Selecionada
-
 for(let i = 0; i < 25; i+=1){
    document.querySelectorAll('.pixel')[i].addEventListener('click', colorir); 
 }
 
-
 function colorir(event){
-    let corSelecionada = document.querySelector('.selected').style.backgroundColor; 
-    event.target.style.backgroundColor = corSelecionada;
-    console.log('clicou')    
+    let corSelecionada = document.querySelector('.selected').id;
+    event.target.style.backgroundColor = corSelecionada;  
 }
