@@ -66,4 +66,8 @@ h1{
     background-color: white;
 }
 
+#clear-board{
+    margin: 10px auto;
+    font-size: 15px;
+}
 

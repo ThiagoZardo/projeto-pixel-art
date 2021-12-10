@@ -1,9 +1,6 @@
 const paletaDeCores = document.getElementById('color-palette');
 let classeSelected = document.createElement('class');
 let colorBlack = document.querySelectorAll('.color')[0];
-let colorRed = document.querySelectorAll('.color')[1];
-let colorBlue = document.querySelectorAll('.color')[2];
-let colorGreen = document.querySelectorAll('.color')[3];
 
 window.onload = function(){
     colorBlack.className += ' selected'
@@ -32,3 +29,14 @@ function colorir(event){
     let corSelecionada = document.querySelector('.selected').id;
     event.target.style.backgroundColor = corSelecionada;  
 }
+
+
+//Botão Limpar
+let limpar = document.getElementById('clear-board').addEventListener('click', limpaPixels);;
+
+function limpaPixels(event){
+    for(let i = 0; i < 25; i+=1){
+        document.querySelectorAll('.pixel')[i].style.backgroundColor='white'; 
+     }
+}
+
