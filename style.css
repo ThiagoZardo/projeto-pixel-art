@@ -9,7 +9,6 @@ h1{
 }
 
 .center{
-    max-width: 1100px;
     margin: 0 auto;
     text-align: center;
 }
@@ -57,7 +56,7 @@ h1{
 }
 
 .pixel{
-    margin-left: -5px;
+    margin-left: -1px;
     margin-bottom: -5px;
     display: inline-block;
     width: 40px;
