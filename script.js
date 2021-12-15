@@ -32,10 +32,16 @@ let textBox = document.querySelector('#board-size').value
 
 function trocaTamanho(number){
     let textBox = document.querySelector('#board-size').value
-    
+
+        
     if(textBox == ''){
         alert('"Board inválido!"')
     }else{
+        if(textBox < 5){
+            textBox = 5
+        }else if(textBox > 50){
+            textBox = 50
+        }
         apagaPixels();
         number = textBox;  
         pixelDinamico(number);
@@ -43,13 +49,14 @@ function trocaTamanho(number){
             let print = document.querySelectorAll('.pixel')
             print[i].addEventListener('click', colorir); 
         }
+        
     }
 }
 
 pixelDinamico(5);
 
 
-
+ 
 
 //Colore com cor Selecionada
 for(let i = 0; i < document.querySelectorAll('.pixel').length; i+=1){  
