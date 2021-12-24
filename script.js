@@ -20,15 +20,9 @@ function selecionaCor(event){
     event.target.classList.add('selected');
 }
 
-
-
-
-
-
 //Quadro com tamanho definido pelo usuário
 let vqv = document.querySelector('#generate-board');
 vqv.addEventListener('click', trocaTamanho);
-let textBox = document.querySelector('#board-size').value
 
 function trocaTamanho(number){
     let textBox = document.querySelector('#board-size').value
@@ -68,17 +62,17 @@ function colorir(event){
 }
 
 //Botão Limpar
-let limpar = document.getElementById('clear-board').addEventListener('click', limpaPixels);;
+let limpar = document.getElementById('clear-board').addEventListener('click', limpaPixels);
 
-function limpaPixels(event){
+function limpaPixels(){
     for(let i = 0; i < document.querySelectorAll('.pixel').length; i+=1){
         document.querySelectorAll('.pixel')[i].style.backgroundColor='white'; 
     }
 }
+ 
 
-
+//Imar Santos me ajudou a entender a lógica e desenvolver o for utilizado aqui
 //Pixel Dinâmico 
-
 function pixelDinamico(number){ 
     let quadroDesenho = document.querySelector('#pixel-board');  
     for(i = 0; i < number; i+=1){
@@ -94,7 +88,7 @@ function pixelDinamico(number){
         quadroDesenho.appendChild(linhaDePixel);
     }
     return number;
-} 
+}
 
 
 //Apaga Pixels
@@ -115,7 +109,7 @@ function coresAleatorias(){
     let hexadecimais = '0123456789ABCDEF';
     let cor = '#';
 
-    for(let i = 1; i < 4; i+=1){
+    for(let i = 1; i < paletas.length; i+=1){
         cor += hexadecimais[Math.floor(Math.random() * 16)];
         paletas[1].style.backgroundColor=cor;
         cor += hexadecimais[Math.floor(Math.random() * 16)];
